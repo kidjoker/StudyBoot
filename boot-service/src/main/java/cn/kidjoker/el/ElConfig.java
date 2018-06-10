@@ -1,5 +1,7 @@
 package cn.kidjoker.el;
 
+import java.io.IOException;
+
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,23 +13,21 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
 
-import java.io.IOException;
-
 @Configuration
 @ComponentScan("cn.kidjoker.el")
-@PropertySource("classpath:test.properties")
+@PropertySource("classpath:cn/kidjoker/el/test.properties")
 public class ElConfig {
 
     @Value("l love you")
     private String normal;
 
-    @Value("#{ SystemProperties['os.name'] }")
+    @Value("#{systemProperties['os.name']}")
     private String osName;
 
     @Value("#{ T(java.lang.Math).random() * 100.0 }")
     private double randomNumber;
 
-    @Value("# {demoService.another}")
+    @Value("#{demoService.another}")
     private String fromAnother;
 
     @Value("classpath:cn/kidjoker/el/test.txt")
