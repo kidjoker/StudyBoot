@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ComponentScan("cn.kidjoker.service")
-@ComponentScan("cn.kidjoker.aop")
-@EnableAspectJAutoProxy
+//@ComponentScan("cn.kidjoker.aop")
+//@EnableAspectJAutoProxy
 public class DiConfig {
 
 }
