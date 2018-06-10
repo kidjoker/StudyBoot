@@ -1,16 +1,7 @@
 package cn.kidjoker.main;
 
 import cn.kidjoker.el.ElConfig;
-import cn.kidjoker.service.IDemoPrototypeService;
-import cn.kidjoker.service.IDemoSingletonService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import cn.kidjoker.aop.DemoAnnotationService;
-import cn.kidjoker.aop.DemoMethodService;
-import cn.kidjoker.config.DiConfig;
-import cn.kidjoker.service.impl.UseFunctionService;
 
 /**
  *

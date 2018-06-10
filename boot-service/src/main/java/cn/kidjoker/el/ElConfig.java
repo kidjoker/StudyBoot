@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @Configuration
 @ComponentScan("cn.kidjoker.el")
-@PropertySource("classpath:cn.kidjoker.el.test.properties")
+@PropertySource("classpath:test.properties")
 public class ElConfig {
 
     @Value("l love you")
