@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/StudyBoot.iml" filepath="$PROJECT_DIR$/.idea/StudyBoot.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-action/boot-action.iml" filepath="$PROJECT_DIR$/boot-action/boot-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-parent/boot-parent.iml" filepath="$PROJECT_DIR$/boot-parent/boot-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-service/boot-service.iml" filepath="$PROJECT_DIR$/boot-service/boot-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-sys/boot-sys.iml" filepath="$PROJECT_DIR$/boot-sys/boot-sys.iml" />
     </modules>

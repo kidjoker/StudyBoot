@@ -1,8 +1,8 @@
 package cn.kidjoker.main;
 
+import cn.kidjoker.annotation.DemoConfig;
+import cn.kidjoker.annotation.DemoService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import cn.kidjoker.el.ElConfig;
 
 /**
  *
@@ -12,15 +12,15 @@ import cn.kidjoker.el.ElConfig;
  * @version 1.0.0
  */
 public class MainTest {
-	
+
 	public static void main(String[] args) {
 
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ElConfig.class);
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DemoConfig.class);
 
-        ElConfig resourceService = ctx.getBean(ElConfig.class);
+        DemoService demoService = ctx.getBean ( DemoService.class );
 
-        resourceService.outputResource();
+        demoService.outputResult ();
 
-		ctx.close();
+        ctx.close ();
 	}
 }
