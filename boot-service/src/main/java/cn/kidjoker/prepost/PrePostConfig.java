@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan("cn.kidjoker.prepost")
 public class PrePostConfig {
 
     @Bean(initMethod = "init", destroyMethod = "destroy")
