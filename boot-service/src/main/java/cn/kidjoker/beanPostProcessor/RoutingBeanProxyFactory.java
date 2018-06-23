@@ -15,7 +15,7 @@ public class RoutingBeanProxyFactory {
         ProxyFactory proxyFactory = new ProxyFactory();
         proxyFactory.setInterfaces(targetClass);
         proxyFactory.addAdvice(new VersionRoutingMethodIterceptor(targetClass, beans));
-
+        return proxyFactory.getProxy();
     }
 
     static class VersionRoutingMethodIterceptor implements MethodInterceptor {
@@ -37,9 +37,8 @@ public class RoutingBeanProxyFactory {
 
         private String buildBeanName(String interfaceName, boolean isSwitchOn) {
 
-            return interfaceName + (isSwitchOn ? " V1" : "V2") + "Impl";
+            return interfaceName + (isSwitchOn ? "V1" : "V2");
         }
-
 
         @Override
         public Object invoke(MethodInvocation methodInvocation) throws Throwable {
@@ -53,12 +52,19 @@ public class RoutingBeanProxyFactory {
             if(StringUtils.isBlank(switchName)) {
                 throw new IllegalStateException("RoutingSwitch's value is blank, method: " + method.getName());
             }
-            return methodInvocation.getMethod().invoke(getTarge,methodInvocation);
+            return methodInvocation.getMethod().invoke(getTargetBean (switchName), methodInvocation.getArguments());
         }
 
         public Object getTargetBean(String switchName) {
 
-            boolean
+            boolean switchOn;
+            if(switchName.equals ( "A" )) {
+                switchOn = false;
+            } else {
+                switchOn = true;
+            }
+            return switchOn ? beanOfSwitchOn : beanOfSwitchOff;
+
         }
 
     }

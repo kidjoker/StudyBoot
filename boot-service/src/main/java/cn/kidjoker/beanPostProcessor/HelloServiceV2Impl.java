@@ -1,5 +1,8 @@
 package cn.kidjoker.beanPostProcessor;
 
+import org.springframework.stereotype.Service;
+
+@Service("helloServiceV2")
 public class HelloServiceV2Impl implements HelloService {
 
     @Override

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.annotation.*;
 
-@Target({ElementType.METHOD, ElementType.FIELD})
+@Target({ElementType.TYPE,ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component

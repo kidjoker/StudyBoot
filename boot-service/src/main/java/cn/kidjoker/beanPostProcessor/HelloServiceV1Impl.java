@@ -1,7 +1,8 @@
 package cn.kidjoker.beanPostProcessor;
 
-import java.sql.SQLOutput;
+import org.springframework.stereotype.Service;
 
+@Service("helloServiceV1")
 public class HelloServiceV1Impl implements HelloService {
 
     @Override

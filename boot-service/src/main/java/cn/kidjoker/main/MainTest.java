@@ -1,7 +1,7 @@
 package cn.kidjoker.main;
 
-import cn.kidjoker.annotation.DemoConfig;
-import cn.kidjoker.annotation.DemoService;
+import cn.kidjoker.beanPostProcessor.HelloController;
+import cn.kidjoker.beanPostProcessor.PostProcessorConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -15,12 +15,15 @@ public class MainTest {
 
 	public static void main(String[] args) {
 
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(DemoConfig.class);
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(PostProcessorConfig.class);
 
-        DemoService demoService = ctx.getBean ( DemoService.class );
+        HelloController helloController = ctx.getBean ( HelloController.class );
 
-        demoService.outputResult ();
+        helloController.sayHi ();
+        helloController.sayHello ();
 
         ctx.close ();
+
+
 	}
 }
