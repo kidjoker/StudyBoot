@@ -17,10 +17,10 @@ public class MainTest {
 
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(PostProcessorConfig.class);
 
-        HelloController helloController = ctx.getBean ( HelloController.class );
+        HelloController helloController=ctx.getBean(HelloController.class);
 
-        helloController.sayHi ();
-        helloController.sayHello ();
+        helloController.sayHi();
+        helloController.sayHello();
 
         ctx.close ();
 

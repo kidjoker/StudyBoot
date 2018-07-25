@@ -9,4 +9,5 @@
   </parent>
   
   <artifactId>boot-service</artifactId>
+  <packaging>jar</packaging>
 </project>

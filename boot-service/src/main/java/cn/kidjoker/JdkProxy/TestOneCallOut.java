@@ -7,4 +7,8 @@ public class TestOneCallOut implements CallOut {
         System.out.println("生命的意义在于不断的思考");
     }
 
+    public void listenToMusic() {
+        System.out.println("listen to Cranberries");
+    }
+
 }

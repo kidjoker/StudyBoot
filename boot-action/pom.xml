@@ -6,6 +6,14 @@
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../boot-parent/pom.xml</relativePath>
   </parent>
-  
   <artifactId>boot-action</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>cn.kidjoker</groupId>
+      <artifactId>boot-service</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
